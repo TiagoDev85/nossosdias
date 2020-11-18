@@ -1,6 +1,6 @@
 /* FONTS */
 
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 * {
   margin: 0;
@@ -8,18 +8,18 @@
   box-sizing: border-box;
 }
 
-body {     
+body {
   position: fixed;
   width: 100%;
   z-index: 0;
 }
 
-.back {  
+.back {
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: linear-gradient(0, #2181f7, #02234b);  
+  background: linear-gradient(0, #2181f7, #02234b);
 }
 
 .container {
@@ -276,7 +276,7 @@ body {
 /* DATA */
 
 .content-body .header {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Indie Flower', cursive;
   grid-area: data;
   display: flex;
   flex-direction: row;
@@ -308,16 +308,16 @@ body {
 /* MENSAGEM */
 
 .content-body .mensagem {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Indie Flower', cursive;
   padding: 20px;
   height: 100%;
   grid-area: mensagem;
   display: flex;
   align-items: center;
+  /* overflow-y: scroll; */
 }
 
 .content-body .mensagem .texto {
-  /* overflow-y: scroll; */
   padding: 40px;
   width: 100%;
   height: 100%;
@@ -348,7 +348,7 @@ body {
   z-index: 2;
 }
 
-@media (min-width: 320px), (max-width: 360px) {
+@media (max-width: 320px), (max-width: 360px) {
   /* TOPO DO CONTAINER */
   .top h1 {
     font-size: 48px;
@@ -365,8 +365,9 @@ body {
   .botao .btnamora span {
     font-size: 14px;
   }
-   /* CORPO */
-   .content-body .mensagem {
+  /* CORPO */
+  .content-body .mensagem {
+    overflow-y: scroll;
     padding: 0;
   }
   .content-body .header .btnvoltar {
@@ -379,7 +380,6 @@ body {
     display: none;
   }
   .content-body .mensagem .texto {
-    overflow-y: scroll;
     padding: 25px;
   }
   .content-body .mensagem .texto p {
@@ -389,7 +389,7 @@ body {
     font-size: 16px;
   }
   /* BALÕES */
-  .baloes-full{
+  .baloes-full {
     position: absolute;
     left: 0%;
     width: 120%;
@@ -401,7 +401,7 @@ body {
   }
 }
 
-@media (min-width: 414px), (min-width: 411px) {
+@media (max-width: 414px), (max-width: 411px) {
   /* TOPO DO CONTAINER */
   .top h1 {
     font-size: 68px;
@@ -420,6 +420,7 @@ body {
   }
   /* CORPO */
   .content-body .mensagem {
+    overflow-y: scroll;
     padding: 0;
   }
   .content-body .header .btnvoltar {
@@ -432,7 +433,6 @@ body {
     display: none;
   }
   .content-body .mensagem .texto {
-    overflow-y: scroll;
     padding: 25px;
   }
   .content-body .mensagem .texto p {
@@ -442,7 +442,7 @@ body {
     font-size: 16px;
   }
   /* BALÕES */
-  .baloes-full{
+  .baloes-full {
     position: absolute;
     left: 0%;
     width: 120%;
@@ -455,7 +455,7 @@ body {
 }
 
 @media (min-width: 768px) {
-  .baloes-full{
+  .baloes-full {
     position: absolute;
     left: -48%;
     width: 180%;
@@ -467,8 +467,8 @@ body {
     width: 100px;
     height: 70px;
   }
-   /* BOTÃO */
-   .botao img {
+  /* BOTÃO */
+  .botao img {
     margin: 0 auto;
     width: 80%;
     height: 80%;
@@ -486,7 +486,7 @@ body {
     font-size: 18px;
   }
   .content-body .mensagem .texto p {
-    font-size: 22px;
+    font-size: 20px;
   }
   .content-body .mensagem .texto .final {
     font-size: 24px;

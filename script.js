@@ -7,10 +7,16 @@ var titulo = document.querySelector('.titulo');
 
 var data = new Date();
 var dia = data.getDate();
+var mesStr = new Array(
+  'Janeiro','Fevereiro', 'Março', 
+  'Abril', 'Maio', 'Junho', 
+  'Julho', 'Agosto', 'Setembro', 
+  'Outubro', 'Novembro', 'Dezembro'
+)
 var mes = data.getMonth();
 var ano = data.getFullYear();
 
-titulo.innerHTML = "Aos " + dia + " de " + mes + " de " + ano;
+titulo.innerHTML = "Aos " + dia + " de " + mesStr[(mes)] + " de " + ano;
 
 btnvoltar.addEventListener('click', function () {
   contentbody.classList.toggle('mostrar');
