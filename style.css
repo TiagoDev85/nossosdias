@@ -442,6 +442,13 @@ body {
     font-size: 16px;
   }
   /* BALÕES */
+  .baloes-full{
+    position: absolute;
+    left: 0%;
+    width: 120%;
+    display: flex;
+    flex-direction: row;
+  }
   .baloes .balao {
     width: 70px;
   }

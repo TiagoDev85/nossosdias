@@ -1,7 +1,7 @@
 var contentbody = document.querySelector('.content-body');
 var btnamora = document.querySelector('.btnamora');
 var btnvoltar = document.querySelector('.btnvoltar');
-var baloes = document.querySelector('.baloes');
+var baloes = document.querySelector('.baloes-full');
 var topo = document.querySelector('.top');
 var titulo = document.querySelector('.titulo');
 
