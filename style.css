@@ -1,0 +1,475 @@
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  background-image: url(/img/rosas.jpeg);
+  background-size: 150px;
+  position: fixed;
+  width: 100%;
+  z-index: 0;
+}
+
+.back {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(0, #2181f7, #02234b);
+  display: grid;
+  grid-template-rows: 40% 40% 20%;
+  grid-template-areas: "topo" "botao" "footer";
+  z-index: 1;
+}
+
+/* TOPO DO CONTAINER */
+
+.top {
+  /* visibility: hidden; */
+  margin-bottom: 10px;
+  grid-area: topo;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lobster', cursive;
+  color: #fff;
+  text-shadow: 1px 3px #000;
+  z-index: 2;
+}
+
+.top h1 {
+  font-size: 108px;
+}
+
+.top span {
+  font-size: 35px;
+}
+
+/* BOTAO */
+
+.botao {
+  /* visibility: hidden; */
+  grid-area: botao;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  z-index: 2;
+}
+
+.botao .btnamora {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: transparent;
+  border: none;
+}
+
+.botao .btnamora img {
+  opacity: 30%;
+}
+
+.botao .btnamora:focus {
+  outline: none;
+}
+
+.botao .btnamora img:hover {
+  opacity: 100%;
+}
+
+/* EFEITO BRILHOSO NO CLIQUE NA AMORA */
+
+@keyframes amora {
+  0% {
+    opacity: 10%;
+  }
+  25% {
+    opacity: 25%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  75% {
+    opacity: 75%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.botao .btnamora span {
+  font-size: 24px;
+  font-family: 'Lobster', cursive;
+  font-weight: 900;
+  color: #fff;
+  animation: amora 2s linear infinite;
+}
+
+/* EFEITO DOS BALÕES */
+
+@keyframes baloes {
+  0% {
+    transform: skew(1deg);
+  }
+  10% {
+    transform: skew(4deg);
+  }
+  20% {
+    transform: skew(6deg);
+  }
+  30% {
+    transform: skew(8deg);
+  }
+  40% {
+    transform: skew(6deg);
+  }
+  50% {
+    transform: skew(4deg);
+  }
+  60% {
+    transform: skew(2deg);
+  }
+  70% {
+    transform: skew(1deg);
+  }
+  100% {
+    transform: skew(0deg);
+  }
+}
+
+@keyframes baloesanime {
+  from {
+    transform: translateY(100vh);
+  }
+  to {
+    transform: translateY(-200vh);
+  }
+}
+
+/* BALÕES */
+
+.baloes {
+  position: relative;
+  display: grid;
+  grid-template-rows: 10% * 8;
+  grid-template-areas: "1" "2" "3" "4" "5" "6" "7" "8" "9" "10";
+  width: 100%;
+  height: 100vh;
+  animation: baloesanime 10s linear infinite;
+  z-index: 1;
+}
+
+.baloes .balao {
+  position: absolute;
+  width: 100px;
+  height: 70px;
+  background-image: url(img/coracoes.png);
+  background-size: cover;
+  animation: baloes 2s linear infinite;
+}
+
+/* POSIÇÃO DOS BALÕES */
+
+.b1 {
+  grid-area: 1;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+}
+
+.b2 {
+  grid-area: 2;
+  position: absolute;
+  top: 60%;
+  left: 20%;
+}
+
+.b3 {
+  grid-area: 3;
+  top: 90%;
+  right: 5%;
+}
+
+.b4 {
+  grid-area: 3;
+  top: 10%;
+  right: 15%;
+}
+
+.b5 {
+  grid-area: 3;
+  top: 0%;
+  right: 70%;
+}
+
+.b6 {
+  grid-area: 3;
+  top: 35%;
+  right: 25%;
+}
+
+.b7 {
+  grid-area: 3;
+  top: -15%;
+  right: 45%;
+}
+
+.b8 {
+  grid-area: 3;
+  top: 15%;
+  right: 75%;
+}
+
+.b9 {
+  grid-area: 3;
+  top: 65%;
+  right: 15%;
+}
+
+.b10 {
+  grid-area: 3;
+  top: 5%;
+  right: 40%;
+}
+
+/* .header{
+  display: none;
+}
+.texto{
+  display: none;
+} */
+
+/* .content-body{
+  display: none;
+} */
+
+/* CONTEÚDO DO SITE */
+
+.content-body {
+  display: none;
+}
+
+.content-body.mostrar {
+  display: grid;
+  grid-template-rows: 10% 75% 15%;
+  grid-template-areas: "data" "mensagem" "footer";
+  position: absolute;
+  /* border: 1px solid #fff; */
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: #000;
+}
+
+/* DATA */
+
+.content-body .header {
+  font-family: 'Dancing Script', cursive;
+  grid-area: data;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.content-body .header .titulo {
+  color: #fff;
+}
+
+.content-body .header .btnvoltar {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-weight: 900;
+}
+
+.content-body .header .btnvoltar:focus {
+  outline: none;
+}
+
+.content-body .header .btnvoltar:hover {
+  color: red;
+}
+
+/* MENSAGEM */
+
+.content-body .mensagem {
+  font-family: 'Dancing Script', cursive;
+  padding: 20px;
+  height: 100%;
+  grid-area: mensagem;
+  display: flex;
+  align-items: center;
+}
+
+.content-body .mensagem .texto {
+  /* overflow-y: scroll; */
+  padding: 40px;
+  width: 100%;
+  height: 100%;
+}
+
+.content-body .mensagem .texto p {
+  color: #fff;
+  text-indent: 40px;
+  text-align: justify;
+}
+
+.content-body .mensagem .texto .final {
+  font-size: 24px;
+  text-align: right;
+  margin-top: 12%;
+}
+
+/* FOOTER */
+
+.flores {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  background-image: url(img/floresdocampo.png);
+  background-size: contain;
+  z-index: 2;
+}
+
+@media (min-width: 320px), (max-width: 360px) {
+  /* TOPO DO CONTAINER */
+  .top h1 {
+    font-size: 48px;
+  }
+  .top span {
+    font-size: 20px;
+  }
+  /* BOTÃO */
+  .botao img {
+    margin: 0 auto;
+    width: 70%;
+    height: 70%;
+  }
+  .botao .btnamora span {
+    font-size: 14px;
+  }
+   /* CORPO */
+   .content-body .mensagem {
+    padding: 0;
+  }
+  .content-body .header .btnvoltar {
+    font-size: 14px;
+  }
+  .content-body .header .titulo {
+    font-size: 18px;
+  }
+  hr {
+    display: none;
+  }
+  .content-body .mensagem .texto {
+    overflow-y: scroll;
+    padding: 25px;
+  }
+  .content-body .mensagem .texto p {
+    font-size: 16px;
+  }
+  .content-body .mensagem .texto .final {
+    font-size: 16px;
+  }
+  /* BALÕES */
+  .baloes .balao {
+    width: 60px;
+  }
+}
+
+@media (min-width: 414px), (min-width: 411px) {
+  /* TOPO DO CONTAINER */
+  .top h1 {
+    font-size: 68px;
+  }
+  .top span {
+    font-size: 24px;
+  }
+  /* BOTÃO */
+  .botao img {
+    margin: 0 auto;
+    width: 70%;
+    height: 70%;
+  }
+  .botao .btnamora span {
+    font-size: 18px;
+  }
+  /* CORPO */
+  .content-body .mensagem {
+    padding: 0;
+  }
+  .content-body .header .btnvoltar {
+    font-size: 14px;
+  }
+  .content-body .header .titulo {
+    font-size: 18px;
+  }
+  hr {
+    display: none;
+  }
+  .content-body .mensagem .texto {
+    overflow-y: scroll;
+    padding: 25px;
+  }
+  .content-body .mensagem .texto p {
+    font-size: 16px;
+  }
+  .content-body .mensagem .texto .final {
+    font-size: 16px;
+  }
+  /* BALÕES */
+  .baloes .balao {
+    width: 70px;
+  }
+}
+
+@media (min-width: 768px) {
+  .baloes .balao {
+    position: absolute;
+    width: 100px;
+    height: 70px;
+  }
+   /* BOTÃO */
+   .botao img {
+    margin: 0 auto;
+    width: 80%;
+    height: 80%;
+  }
+  .botao .btnamora span {
+    font-size: 24px;
+  }
+  .content-body .mensagem .texto {
+    overflow: hidden;
+  }
+  .content-body .header .titulo {
+    font-size: 22px;
+  }
+  .content-body .header .btnvoltar {
+    font-size: 18px;
+  }
+  .content-body .mensagem .texto p {
+    font-size: 22px;
+  }
+  .content-body .mensagem .texto .final {
+    font-size: 24px;
+    text-align: right;
+    margin-top: 5%;
+  }
+}
