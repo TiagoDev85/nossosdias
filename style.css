@@ -10,7 +10,7 @@
 
 body {
   background-color: #000;
-  background-image: url(/img/rosas.jpeg);
+  background-image: url(img/rosas.jpeg);
   background-size: 150px;
   position: fixed;
   width: 100%;
