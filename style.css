@@ -8,18 +8,18 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #000;
-  background-image: url(img/rosas.jpeg);
-  background-size: 150px;
+body {     
   position: fixed;
   width: 100%;
   z-index: 0;
 }
 
-.back {
-  width: 100vw;
-  height: 100vh;
+.back {  
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(0, #2181f7, #02234b);  
 }
 
 .container {
@@ -389,6 +389,13 @@ body {
     font-size: 16px;
   }
   /* BALÕES */
+  .baloes-full{
+    position: absolute;
+    left: 0%;
+    width: 120%;
+    display: flex;
+    flex-direction: row;
+  }
   .baloes .balao {
     width: 60px;
   }
@@ -441,6 +448,13 @@ body {
 }
 
 @media (min-width: 768px) {
+  .baloes-full{
+    position: absolute;
+    left: -48%;
+    width: 180%;
+    display: flex;
+    flex-direction: row;
+  }
   .baloes .balao {
     position: absolute;
     width: 100px;
